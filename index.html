@@ -51,7 +51,22 @@
     <p>If you believe you were banned unfairly or want to return, please submit an appeal below.</p>
     <a class="appeal-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdTjiMfuHfJz6nPpdTmWxWncKFeSwrvuuCaNPFKBPF5F1rV8A/viewform" target="_blank">Submit Appeal</a>
   </section>
+<script>
+  function updateFloridaTime() {
+    const options = {
+      timeZone: 'America/New_York',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true
+    };
+    const formatter = new Intl.DateTimeFormat([], options);
+    document.getElementById('florida-time').textContent = formatter.format(new Date());
+  }
 
+  setInterval(updateFloridaTime, 1000);
+  updateFloridaTime();
+</script>
 </body>
 </html>
 
