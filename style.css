@@ -137,3 +137,29 @@ section p {
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
+#in-game-code {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px auto;
+  color: white;
+  text-align: center;
+  max-width: 600px;
+}
+
+#in-game-code h2 {
+  color: #ff6a00; /* True orange */
+  margin-bottom: 10px;
+}
+
+.code-box {
+  font-size: 24px;
+  font-weight: bold;
+  background-color: black;
+  color: #ff6a00; /* True orange */
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  border: 1px solid #ff6a00;
+  margin-top: 10px;
+}
