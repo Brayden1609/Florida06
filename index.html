@@ -7,9 +7,34 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="https://images-ext-1.discordapp.net/external/Te3YIvBYGU7Lwd_15nb4qIuv67CHF3MkaVkECoLVd3s/https/cdn.discordapp.com/icons/1350950719036854352/fd628f8681aa3278f38efe5314ef0020.webp?format=webp&width=107&height=107" type="image/webp">
   <style>
-    h1, .launch-info, .about-text, .appeal-info {
+    h1 {
       color: #FF6600;
       text-shadow: 0 0 8px #FF6600, 0 0 16px #FF6600;
+      transition: text-shadow 0.3s ease;
+    }
+    h1:hover {
+      text-shadow: 0 0 12px #FF6600, 0 0 24px #FF6600;
+    }
+
+    .launch-info, .about-text, .appeal-info {
+      color: #FF6600;
+      text-shadow: 0 0 8px #FF6600, 0 0 16px #FF6600;
+    }
+
+    /* Hover effect for sections */
+    section {
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    section:hover {
+      background-color: rgba(255, 102, 0, 0.1);  /* Light orange background on hover */
+      transform: translateY(-5px);  /* Slightly lift the section */
+    }
+
+    #florida-time-container {
+      margin-top: 10px;
+      color: #FF6600;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -31,6 +56,8 @@
     <h1>FLORIDA STATE ROLEPLAY</h1>
     <p class="launch-info">Launched March 16th, 12AM EST by Dappy and Soloxfr</p>
   </header>
+
+  <!-- Florida Time -->
   <div id="florida-time-container">
     Current Florida Time: <span id="florida-time"></span>
   </div>
@@ -65,30 +92,34 @@
     <a class="appeal-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdTjiMfuHfJz6nPpdTmWxWncKFeSwrvuuCaNPFKBPF5F1rV8A/viewform" target="_blank">Submit Appeal</a>
   </section>
 
- <footer style="
-  margin-top: 50px;
-  width: 100%;
-  text-align: center;
-  color: #FF6600;
-  font-size: 18px;
-  font-weight: bold;
-  text-shadow: 0 0 8px #FF6600, 0 0 16px #FF6600;
-">
-  Made by Inman.xfr | Florida State Roleplay All Rights Reserved™<br>
-  Powered by Nova Web Development
-</footer>
+  <!-- Footer -->
+  <footer style="
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+    color: #FF6600;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 0 0 8px #FF6600, 0 0 16px #FF6600;
+  ">
+    Made by Inman.xfr | Florida State Roleplay All Rights Reserved™<br>
+    Powered by Nova Web Development
+  </footer>
 
+  <!-- Scripts -->
   <script>
+    // Update Florida Time
     function updateFloridaTime() {
-      const options = {
+      const floridaOptions = {
         timeZone: 'America/New_York',
         hour: '2-digit',
         minute: '2-digit',
         second: '2-digit',
         hour12: true
       };
-      const formatter = new Intl.DateTimeFormat([], options);
-      document.getElementById('florida-time').textContent = formatter.format(new Date());
+
+      const floridaTime = new Intl.DateTimeFormat([], floridaOptions).format(new Date());
+      document.getElementById('florida-time').textContent = floridaTime;
     }
 
     setInterval(updateFloridaTime, 1000);
