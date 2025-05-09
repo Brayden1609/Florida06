@@ -6,6 +6,12 @@
   <title>FSRP</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="https://images-ext-1.discordapp.net/external/Te3YIvBYGU7Lwd_15nb4qIuv67CHF3MkaVkECoLVd3s/https/cdn.discordapp.com/icons/1350950719036854352/fd628f8681aa3278f38efe5314ef0020.webp?format=webp&width=107&height=107" type="image/webp">
+  <style>
+    h1, .launch-info, .about-text, .appeal-info {
+      color: #FF6600;
+      text-shadow: 0 0 8px #FF6600, 0 0 16px #FF6600;
+    }
+  </style>
 </head>
 
 <body>
@@ -26,38 +32,31 @@
     <p class="launch-info">Launched March 16th, 12AM EST by Dappy and Soloxfr</p>
   </header>
   <div id="florida-time-container">
-  Current Florida Time: <span id="florida-time"></span>
-</div>
-
+    Current Florida Time: <span id="florida-time"></span>
+  </div>
 
   <!-- Info Section -->
   <section id="info">
     <h2>About the Server</h2>
     <p class="about-text">This server is designed to offer a realistic and enjoyable roleplay experience. We pride ourselves on professionalism, community, and creativity.</p>
   </section>
+
   <section id="in-game-code">
-  <h2>In-Game Code</h2>
-  <div class="code-box">FSRPMI</div>
-</section>
+    <h2>In-Game Code</h2>
+    <div class="code-box">FSRPMI</div>
+  </section>
 
-
-<!-- Owners Section -->
-<section id="owners">
-  <h2>FOUNDERSHIP</h2>
-  <div style="color: #FF6600; font-size: 18px; font-weight: bold; display: flex; flex-wrap: wrap; gap: 20px;">
-    <span>Dappy – Founder</span>
-    <span>Soloxfr – Founder</span>
-    <span>Shaggy – Co-Founder</span>
-    <span>Brayden – Assistant Founder</span>
-    <span>SJC404 – Assistant Founder</span>
-  </div>
-</section>
-
-
-
-
-
-
+  <!-- Owners Section -->
+  <section id="owners">
+    <h2>FOUNDERSHIP</h2>
+    <div style="color: #FF6600; font-size: 18px; font-weight: bold; display: flex; flex-wrap: wrap; gap: 20px;">
+      <span>Dappy – Founder</span>
+      <span>Soloxfr – Founder</span>
+      <span>Shaggy – Co-Founder</span>
+      <span>Brayden – Assistant Founder</span>
+      <span>SJC404 – Assistant Founder</span>
+    </div>
+  </section>
 
   <!-- Ban Appeal Section -->
   <section id="appeal">
@@ -65,38 +64,35 @@
     <p class="appeal-info">If you believe you were banned unfairly or want to return, please submit an appeal below.</p>
     <a class="appeal-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdTjiMfuHfJz6nPpdTmWxWncKFeSwrvuuCaNPFKBPF5F1rV8A/viewform" target="_blank">Submit Appeal</a>
   </section>
-  
-  <!-- Footer -->
-<footer style="
+
+ <footer style="
   margin-top: 50px;
   width: 100%;
   text-align: center;
   color: #FF6600;
   font-size: 18px;
   font-weight: bold;
+  text-shadow: 0 0 8px #FF6600, 0 0 16px #FF6600;
 ">
   Made by Inman.xfr | Florida State Roleplay All Rights Reserved™<br>
   Powered by Nova Web Development
 </footer>
 
+  <script>
+    function updateFloridaTime() {
+      const options = {
+        timeZone: 'America/New_York',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true
+      };
+      const formatter = new Intl.DateTimeFormat([], options);
+      document.getElementById('florida-time').textContent = formatter.format(new Date());
+    }
 
-  
-
-<script>
-  function updateFloridaTime() {
-    const options = {
-      timeZone: 'America/New_York',
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-      hour12: true
-    };
-    const formatter = new Intl.DateTimeFormat([], options);
-    document.getElementById('florida-time').textContent = formatter.format(new Date());
-  }
-
-  setInterval(updateFloridaTime, 1000);
-  updateFloridaTime();
-</script>
+    setInterval(updateFloridaTime, 1000);
+    updateFloridaTime();
+  </script>
 </body>
 </html>
