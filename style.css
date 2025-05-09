@@ -126,18 +126,7 @@ section p {
   margin-top: 20px;
 }
 
-#discord-widget h2 {
-  font-size: 30px;
-  color: #ff6a00;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-#discord-widget iframe {
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-}
-#in-game-code h2 {
+-game-code h2 {
   color: #ff6a00; /* True orange */
   margin-bottom: 10px;
 }
@@ -211,4 +200,27 @@ section {
   .panel {
     width: 100% !important;
   }
+}/* Specific Text Sections */
+.launch-info,
+.about-text,
+.appeal-info {
+  color: #FF6600; /* Vibrant Orange for specific text sections */
+}
+
+/* Specific Classes for the Text */
+.launch-info {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.about-text {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.appeal-info {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
 }
