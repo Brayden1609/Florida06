@@ -1,226 +1,219 @@
-/* General Reset & Styling */
+/* General Styles */
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #121212;
+  background-color: #1a1a1a;
   color: #fff;
+  text-align: center;
 }
 
-/* Nav Bar */
+h1, h2, h3 {
+  color: #FF6600;
+  text-shadow: 0 0 8px #FF6600, 0 0 16px #FF6600;
+}
+
+p {
+  color: #ddd;
+}
+
+/* Navigation */
 nav {
-  background-color: #111;
-  position: sticky;
-  top: 0;
-  padding: 15px 0;
-  z-index: 1000;
+  background-color: #333;
+  padding: 10px 0;
 }
 
 nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  list-style: none;
+  list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
 nav ul li a {
-  color: #ff6a00;
+  color: #FF6600;
   text-decoration: none;
-  font-weight: 600;
   font-size: 18px;
-  padding: 5px 10px;
-  transition: all 0.3s;
+  padding: 10px;
+  text-shadow: 0 0 8px #FF6600, 0 0 16px #FF6600;
 }
 
 nav ul li a:hover {
+  background-color: #FF6600;
   color: #fff;
-  background-color: #ff6a00;
   border-radius: 5px;
 }
 
-/* Panel Container */
-section {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 30px;
-  background-color: #1a1a1a;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-  margin-bottom: 40px;
-}
-
-/* Header (Title Section) */
+/* Header */
 header {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: #1a1a1a;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  background-color: #111;
+  padding: 40px 0;
 }
 
 header h1 {
   font-size: 40px;
-  color: #ff6a00;
   margin-bottom: 10px;
 }
 
-header p {
+header .launch-info {
   font-size: 18px;
-  color: #ccc;
-  max-width: 800px;
-  margin: 0 auto;
+  color: #aaa;
 }
 
-/* Content Sections */
-h2 {
-  font-size: 30px;
-  color: #ff6a00;
-  text-transform: uppercase;
-  margin-bottom: 20px;
+/* Hover Effects for Sections */
+section:hover {
+  background-color: #333;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-section p {
-  color: #ccc;
-  font-size: 18px;
-  line-height: 1.6;
-  max-width: 850px;
-  margin: 0 auto;
-}
-
-/* Ban Appeal Button */
-.appeal-btn {
-  display: inline-block;
-  padding: 12px 30px;
-  background-color: #ff6a00;
-  color: #fff;
-  text-decoration: none;
+/* Info Section */
+#info {
+  background-color: #222;
+  padding: 20px;
   border-radius: 8px;
+  margin: 20px;
+}
+
+#info h2 {
+  font-size: 28px;
+}
+
+#info p {
+  font-size: 16px;
+  color: #bbb;
+}
+
+/* In-Game Code Section */
+#in-game-code {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+#in-game-code .code-box {
+  display: inline-block;
+  background-color: #FF6600;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 22px;
   font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* Founders Section */
+#owners {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+#owners h2 {
+  font-size: 28px;
+}
+
+#owners div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#owners span {
+  color: #FF6600;
   font-size: 18px;
-  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Ban Appeal Section */
+#appeal {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+#appeal h2 {
+  font-size: 28px;
+}
+
+#appeal p {
+  font-size: 16px;
+  color: #bbb;
+}
+
+.appeal-btn {
+  background-color: #FF6600;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
 .appeal-btn:hover {
-  background-color: #e55d00;
-}
-/* Invite Link Styling */
-.invite-link {
-  color: #ff6a00;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
+  background-color: #e55c00;
 }
 
-.invite-link:hover {
-  color: #fff;
-}
-/* Discord Widget Section Styling */
-#discord-widget {
-  padding: 30px;
-  background-color: #1a1a1a;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-  margin-top: 20px;
-}
-
--game-code h2 {
-  color: #ff6a00; /* True orange */
-  margin-bottom: 10px;
-}
-
-.code-box {
-  font-size: 24px;
-  font-weight: bold;
-  background-color: black;
-  color: #ff6a00; /* True orange */
-  padding: 10px 20px;
-  border-radius: 8px;
-  display: inline-block;
-  border: 1px solid #ff6a00;
-  margin-top: 10px;
-}
-#florida-time-container {
-  background-color: #1a1a1a;
-  color: #ff6a00; /* Deep orange */
+/* Footer */
+footer {
+  margin-top: 50px;
+  width: 100%;
   text-align: center;
-  padding: 15px 20px;
-  border-radius: 10px;
-  font-family: 'Segoe UI', sans-serif;
+  color: #FF6600;
   font-size: 18px;
-  margin: 20px auto;
-  max-width: 300px;
-  box-shadow: 0 0 10px rgba(255, 106, 0, 0.3);
-}
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-weight: bold;
+  text-shadow: 0 0 8px #FF6600, 0 0 16px #FF6600;
+  background-color: #111;
   padding: 20px;
 }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-
-section {
-  max-width: 100%;
+/* PST Time Element Styles */
+#pst-time-container {
+  margin-top: 10px;
+  color: #00CCFF;  /* Light blue for PST time */
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
   padding: 10px;
-  box-sizing: border-box;
+  border: 2px solid #00CCFF;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+  background-color: rgba(0, 204, 255, 0.1); /* Light blue background */
+  box-shadow: 0 4px 6px rgba(0, 204, 255, 0.3);
 }
 
-/* Responsive design for small screens */
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  iframe {
-    width: 100% !important;
-    height: auto;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  .panel {
-    width: 100% !important;
-  }
-}/* Specific Text Sections */
-.launch-info,
-.about-text,
-.appeal-info {
-  color: #FF6600; /* Vibrant Orange for specific text sections */
+/* Hover effect for PST Time container */
+#pst-time-container:hover {
+  background-color: rgba(0, 204, 255, 0.2);
+  transform: translateY(-5px);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Specific Classes for the Text */
-.launch-info {
-  font-size: 18px;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.about-text {
+/* Text inside PST Time Element */
+#pst-time {
   font-size: 20px;
-  margin-top: 30px;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  color: #00CCFF;
 }
 
-.appeal-info {
-  font-size: 18px;
-  text-align: center;
-  margin-top: 20px;
+/* Section Hover Effects */
+section:hover {
+  background-color: #444;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
