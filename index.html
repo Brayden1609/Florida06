@@ -1,302 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FSRP - Florida State Roleplay</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="https://images-ext-1.discordapp.net/external/Te3YIvBYGU7Lwd_15nb4qIuv67CHF3MkaVkECoLVd3s/https/cdn.discordapp.com/icons/1350950719036854352/fd628f8681aa3278f38efe5314ef0020.webp?format=webp&width=107&height=107" type="image/webp">
-  
-  <!-- Add the stars background CSS -->
+  <meta charset="UTF-8">
+  <title>Site Shutdown</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #000;
-      color: #fff;
+      background-color: #000000;
+      color: #ffd700; /* Caution yellow */
+      font-family: 'Arial Black', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
       text-align: center;
-      position: relative;
     }
 
-    /* Starry background animation */
-    .stars {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('https://www.transparenttextures.com/patterns/stardust.png');
-      animation: starMove 200s linear infinite;
-      z-index: -1;
-    }
-
-    @keyframes starMove {
-      0% { background-position: 0 0; }
-      100% { background-position: -10000px 10000px; }
-    }
-
-    h1, h2, h3 {
-      color: #FF6600;
-      text-shadow: 0 0 8px #FF6600, 0 0 16px #FF6600;
+    h1 {
+      font-size: 3.5em;
+      margin: 0;
+      text-transform: uppercase;
+      text-shadow: 2px 2px #444;
     }
 
     p {
-      color: #ddd;
-    }
-    
-    /* Navigation */
-    nav {
-      background-color: #1a1a1a;
-      padding: 10px 0;
+      font-size: 1.8em;
+      margin-top: 0.3em;
+      text-shadow: 1px 1px #333;
     }
 
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav ul li {
-      display: inline-block;
-      margin-right: 20px;
-    }
-
-    nav ul li a {
-      color: #FF6600;
-      text-decoration: none;
-      font-size: 18px;
-      padding: 10px;
-      text-shadow: 0 0 8px #FF6600, 0 0 16px #FF6600;
-    }
-
-    nav ul li a:hover {
-      background-color: #FF6600;
-      color: #fff;
-      border-radius: 5px;
-    }
-
-    /* Header */
-    header {
-      background-color: #111;
-      padding: 40px 0;
-    }
-
-    header h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    header .launch-info {
-      font-size: 18px;
-      color: #aaa;
-    }
-
-    /* Hover Effects for Sections */
-    section:hover {
-      background-color: #444;
-      transform: translateY(-5px);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    /* Info Section */
-    #info {
+    #countdown {
+      font-size: 2em;
+      margin-top: 1em;
+      color: #ffcc00;
       background-color: #222;
-      padding: 20px;
-      border-radius: 8px;
-      margin: 20px;
-    }
-
-    #info h2 {
-      font-size: 28px;
-    }
-
-    #info p {
-      font-size: 16px;
-      color: #bbb;
-    }
-
-    /* In-Game Code Section */
-    #in-game-code {
-      background-color: #333;
-      padding: 20px;
-      border-radius: 8px;
-      margin: 20px;
-    }
-
-    #in-game-code .code-box {
-      display: inline-block;
-      background-color: #FF6600;
       padding: 10px 20px;
-      border-radius: 5px;
-      font-size: 22px;
-      font-weight: bold;
-      color: #fff;
-      text-transform: uppercase;
-    }
-
-    /* Founders Section */
-    #owners {
-      background-color: #222;
-      padding: 20px;
-      border-radius: 8px;
-      margin: 20px;
-    }
-
-    #owners h2 {
-      font-size: 28px;
-    }
-
-    #owners div {
-      color: #FF6600;
-      font-size: 18px;
-      font-weight: bold;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    /* Ban Appeal Section */
-    #appeal {
-      background-color: #333;
-      padding: 20px;
-      border-radius: 8px;
-      margin: 20px;
-    }
-
-    #appeal h2 {
-      font-size: 28px;
-    }
-
-    #appeal p {
-      font-size: 16px;
-      color: #bbb;
-    }
-
-    .appeal-btn {
-      background-color: #FF6600;
-      color: #fff;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 18px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-
-    .appeal-btn:hover {
-      background-color: #e55c00;
-    }
-
-    /* Footer */
-    footer {
-      margin-top: 50px;
-      width: 100%;
-      text-align: center;
-      color: #FF6600;
-      font-size: 18px;
-      font-weight: bold;
-      text-shadow: 0 0 8px #FF6600, 0 0 16px #FF6600;
-      background-color: #111;
-      padding: 20px;
-    }
-
-    /* PST Time Element Styles */
-    #pst-time-container {
-      margin-top: 10px;
-      color: #00CCFF;  /* Light blue for PST time */
-      font-weight: bold;
-      font-size: 18px;
-      text-align: center;
-      padding: 10px;
-      border: 2px solid #00CCFF;
+      border: 3px dashed #ffd700;
       border-radius: 10px;
-      width: 100%;
-      max-width: 300px;
-      margin: 20px auto;
-      background-color: rgba(0, 204, 255, 0.1); /* Light blue background */
-      box-shadow: 0 4px 6px rgba(0, 204, 255, 0.3);
     }
-
-    /* Hover effect for PST Time container */
-    #pst-time-container:hover {
-      background-color: rgba(0, 204, 255, 0.2);
-      transform: translateY(-5px);
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    /* Text inside PST Time Element */
-    #pst-time {
-      font-size: 20px;
-      font-family: 'Arial', sans-serif;
-      font-weight: bold;
-      color: #00CCFF;
-    }
-
   </style>
 </head>
-
 <body>
+  <h1>Site Shutdown</h1>
+  <p>Please wait</p>
+  <div id="countdown">Loading...</div>
 
-  <div class="stars"></div>
+  <script>
+    const countdownKey = "shutdownCountdownTarget";
+    let targetTime = localStorage.getItem(countdownKey);
 
-  <!-- Navigation -->
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#info">Info</a></li>
-      <li><a href="#owners">Owners</a></li>
-      <li><a href="#appeal">Ban Appeal</a></li>
-    </ul>
-  </nav>
+    if (!targetTime) {
+      targetTime = new Date().getTime() + 6 * 60 * 60 * 1000; // 6 hours from now
+      localStorage.setItem(countdownKey, targetTime);
+    } else {
+      targetTime = parseInt(targetTime);
+    }
 
-  <!-- Header -->
-  <header id="home">
-    <h1>FLORIDA STATE ROLEPLAY</h1>
-    <p class="launch-info">Launched March 16th, 12AM EST by Dappy and Soloxfr</p>
-  </header>
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetTime - now;
 
-  
-  <!-- Info Section -->
-  <section id="info">
-    <h2>About the Server</h2>
-    <p>This server is designed to offer a realistic and enjoyable roleplay experience. We pride ourselves on professionalism, community, and creativity.</p>
-  </section>
+      if (distance <= 0) {
+        document.getElementById("countdown").innerHTML = "Rebooting now...";
+        return;
+      }
 
-  <!-- In-Game Code Section -->
-  <section id="in-game-code">
-    <h2>In-Game Code</h2>
-    <div class="code-box">FSRPMI</div>
-  </section>
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  <!-- Owners Section -->
-  <section id="owners">
-    <h2>Foundership</h2>
-    <div>
-      <span>Dappy – Founder</span>
-      <span>Yosolostxr – Founder</span>
-      <span>Shaggy – Retired</span>
-      <span>Brayden – Co Founder</span>
-      <span>SJC404 – Assistant Founder</span>
-      <span>Wrldzt – Assistant Founder</span>
-    </div>
-  </section>
+      document.getElementById("countdown").innerHTML =
+        `${hours}h ${minutes}m ${seconds}s`;
 
-  <!-- Ban Appeal Section -->
-  <section id="appeal">
-    <h2>Ban Appeal</h2>
-    <p>If you have been banned and wish to appeal, click the button below:</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdTjiMfuHfJz6nPpdTmWxWncKFeSwrvuuCaNPFKBPF5F1rV8A/viewform" class="appeal-btn">Appeal Ban</a>
-  </section>
+      setTimeout(updateCountdown, 1000);
+    }
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Florida State Roleplay. All Rights Reserved.
-      Powered By N0VA
-    </p>
-  </footer>
-
-
+    updateCountdown();
+  </script>
 </body>
 </html>
